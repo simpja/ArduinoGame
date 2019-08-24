@@ -1,0 +1,26 @@
+{
+  "name": "arduinogame",
+  "version": "1.0.0",
+  "description": "Arduino and Johnny-five and maybe some phaser",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ArduinoGame"
+  },
+  "keywords": [
+    "Arduino",
+    "Game",
+    "Javascript",
+    "Phaser",
+    "Johnny-five"
+  ],
+  "author": "simpja",
+  "license": "MIT",
+  "dependencies": {
+    "johnny-five": "^1.3.0",
+    "phaser": "^3.19.0"
+  }
+}
