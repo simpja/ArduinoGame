@@ -4,7 +4,8 @@
   "description": "Arduino and Johnny-five and maybe some phaser",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start": "index.js"
   },
   "repository": {
     "type": "git",
