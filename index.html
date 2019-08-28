@@ -4,22 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <title>Arduino Game</title>
   </head>
   <body>
     <h1>Hei!</h1>
+    <h1 id="data-placeholder">Ingenting</h1>
+    <button onclick="getValue()">Get data!</button>
 
-    <!-- 
     <script>
-      const Http = new XMLHttpRequest();
-      const url = "localhost:8080";
-      Http.open("GET", url);
-      Http.send();
+      //const Http = new XMLHttpRequest();
 
-      Http.onreadystatechange = e => {
-        console.log(Http.responseText);
-      };
+      async function getValue() {
+        const api_endpoint = "http://localhost:8080/data";
+        const response = await fetch(api_endpoint, {
+          method: "GET",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json"
+          }
+        });
+
+        const json = await response.json();
+
+        document.getElementById("data-placeholder").innerHTML =
+          "New value: " + json.potentiometerData;
+        console.log(json);
+      }
+
+      setInterval(getValue, 500);
+      /*
+        Http.open("GET", url);
+        Http.send();
+
+        Http.onreadystatechange = e => {
+          console.log(Http.responseText);
+        };
+        */
     </script>
-    -->
   </body>
 </html>
